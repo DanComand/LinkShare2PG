@@ -21,6 +21,12 @@ class BookmarksController < ApplicationController
    def create
     @bookmark = Bookmark.new(bookmark_params)
 
+    meta = MetaInspector.new(@bookmark.url)
+    @bookmark.title = meta.title
+    @bookmark.image = meta.images.best
+    @bookmark.summary = meta.description
+
+
     if @bookmark.save
       redirect_to bookmarks_url
     else

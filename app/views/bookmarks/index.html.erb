@@ -17,6 +17,9 @@
 <% end %>
 
 <% @bookmarks.each do |bookmark| %>
-  <p><%= bookmark.url %></p>
-  <p><%= bookmark.description %></p>
+  <!-- <p><%= bookmark.url %></p> -->
+  <p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
+
+<p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
+  <p><%= bookmark.summary %></p>
 <% end %>
