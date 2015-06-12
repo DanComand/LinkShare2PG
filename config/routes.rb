@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
 
 
+  resources :lists
   root 'bookmarks#index'
 
   resources :sessions, only: [:new, :create]
   delete '/logout' => 'sessions#destroy'
 
   resources :users, only: [:new, :create]
-  resources :bookmarks do
+  resources :lists do
+    resources :bookmarks do
     resources :notes, only: [:show, :create, :destroy]
   end
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
