@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to bookmarks_url, notice: "Logged In"
+         else
+      flash.now[:alert] = "Invalid email or password"
     else
       render "new"
     end
