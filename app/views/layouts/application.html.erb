@@ -6,6 +6,17 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav>
+Sauce!
+  <p class="userinfo">
+    <% if current_user %>
+      Signed in as <%= current_user.first_Name %> //
+      <%= link_to "Log Out", logout_path, :method => :delete %>
+      <% else %>
+      <%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
+      <% end %>
+  </p>
+</nav>
 <body>
    <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
@@ -15,13 +26,6 @@
     <% end %>
 <%= yield %>
 
-<p class="userinfo">
-    <% if current_user %>
-      Signed in as <%= current_user.first_Name %> //
-      <%= link_to "Log Out", logout_path, :method => :delete %>
-      <% else %>
-      <%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
-      <% end %>
-    </p>
+
 </body>
 </html>

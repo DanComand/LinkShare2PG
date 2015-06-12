@@ -1,25 +1,32 @@
-<%= form_for Bookmark.new do |f| %>
 
-  <div class ="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
+<div class="bookmark-form">
+  <%= form_for Bookmark.new do |f| %>
 
-  <div class ="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
+    <div class ="field">
+      <%= f.label :url %><br>
+      <%= f.text_field :url %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class ="field">
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </div>
 
-<% end %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 
-<% @bookmarks.each do |bookmark| %>
-  <!-- <p><%= bookmark.url %></p> -->
-  <p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
+  <% end %>
 
-<p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
-  <p><%= bookmark.summary %></p>
-<% end %>
+</div>
+
+
+<div class="bookmark-list">
+  <% @bookmarks.each do |bookmark| %>
+    <!-- <p><%= bookmark.url %></p> -->
+    <p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
+
+  <p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
+    <p><%= bookmark.summary %></p>
+  <% end %>
+</div>
