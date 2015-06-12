@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
   def index
-    @bookmarks = Bookmark.all
+    @bookmarks = current_user.bookmarks
   end
 
   def show
@@ -20,6 +20,7 @@ class BookmarksController < ApplicationController
 
    def create
     @bookmark = Bookmark.new(bookmark_params)
+    @bookmark.user_id = current_user.id
 
     meta = MetaInspector.new(@bookmark.url)
     @bookmark.title = meta.title

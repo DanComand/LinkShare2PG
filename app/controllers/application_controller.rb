@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+    before_filter :ensure_logged_in
 
   private
   def current_user
@@ -9,5 +10,14 @@ class ApplicationController < ActionController::Base
   end
 
 
-  helper_method :current_user
+
+    helper_method :current_user
+
+    def ensure_logged_in
+      unless current_user
+        flash[:alert] = "Thanks for checking out LinkShare. Please log in to add bookmarks."
+
+      end
+    end
+
 end
