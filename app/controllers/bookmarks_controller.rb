@@ -1,6 +1,9 @@
 class BookmarksController < ApplicationController
+
+  before_filter :ensure_logged_in, only: [:index, :create, :destroy]
+
   def index
-    @bookmarks = current_user.bookmarks
+    @bookmarks = current_user.bookmarks.order(created_at: :desc)
   end
 
   def show
