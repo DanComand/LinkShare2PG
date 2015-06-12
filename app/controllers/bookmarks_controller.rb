@@ -4,6 +4,11 @@ class BookmarksController < ApplicationController
   end
 
   def show
+    @bookmark = Bookmark.find(params[:id])
+
+    if current_user
+      @note = @bookmark.notes.build
+    end
   end
 
   def new
@@ -11,6 +16,16 @@ class BookmarksController < ApplicationController
   end
 
   def edit
+  end
+
+   def create
+    @bookmark = Bookmark.new(bookmark_params)
+
+    if @bookmark.save
+      redirect_to bookmarks_url
+    else
+      render :new
+    end
   end
 
   private

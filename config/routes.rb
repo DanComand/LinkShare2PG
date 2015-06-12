@@ -3,15 +3,12 @@ Rails.application.routes.draw do
 
 
 
-  get 'notes/show'
-
-  get 'notes/create'
-
-  get 'notes/destroy'
-
   resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
-  resources :bookmarks
+  resources :bookmarks do
+    resources :notes, only: [:show, :create, :destroy]
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,2 +1,22 @@
-<h1>Bookmarks#index</h1>
-<p>Find me in app/views/bookmarks/index.html.erb</p>
+<%= form_for Bookmark.new do |f| %>
+
+  <div class ="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class ="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+<% @bookmarks.each do |bookmark| %>
+  <p><%= bookmark.url %></p>
+  <p><%= bookmark.description %></p>
+<% end %>
