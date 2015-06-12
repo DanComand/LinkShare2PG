@@ -10,7 +10,7 @@ class NotesController < ApplicationController
     @note.bookmark = current_user
 
     if @note.save
-      redirect_to bookmarks_path, notice: "Comment saved!"
+      redirect_to lists_path, notice: "Comment saved!"
     else
       render 'bookmarks/show'
     end

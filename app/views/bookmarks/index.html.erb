@@ -1,6 +1,6 @@
 
 <div class="bookmark-form">
-  <%= form_for Bookmark.new do |f| %>
+  <%= form_for [@list, Bookmark.new] do |f| %>
 
     <div class ="field">
       <%= f.label :url %><br>
