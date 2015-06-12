@@ -1,2 +1,24 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="login-form">
+
+  <h1>Create a new list</h1>
+
+    <%= form_for List.new do |f| %>
+
+    <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+
+<div class="list-each">
+
+    <% @lists.each do |list| %><br>
+    <%= link_to list.name, "/lists/#{list.id}" %>
+    <% end %>
+
+</div>

@@ -1,0 +1,17 @@
+<%= form_for [@list, Bookmark.new] do |f| %>
+
+<div class="field">
+  <%= f.label :Add_A_Link %><br>
+  <%= f.text_field :url %>
+</div>
+
+<div class="field">
+  <%= f.label :description %><br>
+  <%= f.text_field :description, :placeholder => "Optional" %>
+</div>
+
+<div class="field">
+  <%= f.submit "Add Link" %>
+</div>
+
+<% end %>

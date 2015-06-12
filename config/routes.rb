@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-
+ root 'bookmarks#index'
   resources :lists
-  root 'bookmarks#index'
+
 
   resources :sessions, only: [:new, :create]
   delete '/logout' => 'sessions#destroy'

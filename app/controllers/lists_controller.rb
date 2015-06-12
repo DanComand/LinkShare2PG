@@ -1,9 +1,9 @@
 class ListsController < ApplicationController
-  before_filter :ensure_has_invite, only: [:show]
+
   before_filter :ensure_logged_in, only: [:index, :create, :destroy]
 
   def index
-    @list = current_user.lists
+    @lists = current_user.lists
   end
 
   def show

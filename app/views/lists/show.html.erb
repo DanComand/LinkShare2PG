@@ -1,2 +1,30 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+
+  <%= render 'bookmarks/form' %>
+
+<div class="login-form">
+
+  <h1>Create a new list</h1>
+
+    <%= form_for List.new do |f| %>
+
+    <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+
+
+<div class="bookmark-list">
+  <% @bookmarks.each do |bookmark| %>
+    <!-- <p><%= bookmark.url %></p> -->
+    <p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
+
+  <p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
+    <p><%= bookmark.summary %></p>
+  <% end %>
+</div>
