@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
 
 
+  get 'notes/show'
+
+  get 'notes/create'
+
+  get 'notes/destroy'
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
   resources :bookmarks
