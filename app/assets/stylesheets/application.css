@@ -25,9 +25,18 @@ border: 2px solid black;
 
 }
 
+.sauce-title {
+
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
 .bookmark-form {
 
 text-align: center;
+padding-top: 30px;
+
 
 }
 
@@ -37,5 +46,5 @@ text-align: center;
 }
 
 img {
-  max-width: 100%;
+  max-width: 75%;
 }
