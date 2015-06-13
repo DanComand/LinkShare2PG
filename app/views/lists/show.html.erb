@@ -2,18 +2,23 @@
 <div class="forms">
   <%= render 'bookmarks/form' %>
 </div>
-  <div class="login-form">
 
-  <div class="bookmark-list">
+  <% @bookmarks.each do |bookmark| %>
 
-    <% @bookmarks.each do |bookmark| %>
-    <div class="each-bookmark">
-      <p>Posted by: <%= bookmark.user.first_Name %></p>
-      <p><a href="<%= bookmark.url %>" target="_blank"><%= bookmark.title %></a></p>
-
-    <p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
-      <p><%= bookmark.summary %></p>
-    </div>
-    <% end %>
-  </div>
+<div class="row">
+<div class="col s12 m7">
+<div class="card">
+<div class="card-image">
+  <img src="<%= bookmark.image %>">
+  <span class="card-title"><%= bookmark.title %></span>
 </div>
+<div class="card-content">
+  <p><%= bookmark.summary %></p>
+</div>
+<div class="card-action">
+  <a href="<%= bookmark.url %>" target="_blank">CHECK OUT THIS ARTICLE</a>
+</div>
+</div>
+</div>
+</div>
+<% end %>
