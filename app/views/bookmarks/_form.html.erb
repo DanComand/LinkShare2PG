@@ -1,13 +1,14 @@
+<div class="form-width">
 <%= form_for [@list, Bookmark.new] do |f| %>
 
-<div class="field">
+<div class="input-field">
   <%= f.label :Add_A_Link %><br>
   <%= f.text_field :url %>
 </div>
 
-<div class="field">
+<div class="input-field">
   <%= f.label :description %><br>
-  <%= f.text_field :description, :placeholder => "Optional" %>
+  <%= f.text_field :description %>
 </div>
 
 <div class="field">
@@ -15,3 +16,4 @@
 </div>
 
 <% end %>
+</div>

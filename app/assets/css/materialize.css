@@ -3,6 +3,8 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
+
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -5035,7 +5037,8 @@ nav {
     color: #fff;
     display: inline-block;
     font-size: 2.1rem;
-    padding: 0; }
+    padding-left: 20px !important;
+    margin-left: 20px !important; }
     nav .brand-logo.center {
       left: 50%;
       -webkit-transform: translateX(-50%);
@@ -5352,6 +5355,7 @@ small {
   background-color: #fff;
   border-radius: 2px; }
   .card .card-title {
+    background-color: #000000;
     color: #fff;
     font-size: 24px;
     font-weight: 300; }
@@ -6087,8 +6091,8 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
       color: #26a69a; }
   .input-field .prefix ~ input, .input-field .prefix ~ textarea {
     margin-left: 3rem;
-    width: 92%;
-    width: calc(100% - 3rem); }
+    width: 50%;
+    width: calc(50% - 3rem); }
   .input-field .prefix ~ textarea {
     padding-top: .8rem; }
   .input-field .prefix ~ label {
@@ -6775,6 +6779,8 @@ select {
     height: 64px;
     line-height: 64px;
     padding: 0 15px; }
+
+
 
 .drag-target {
   height: 100%;

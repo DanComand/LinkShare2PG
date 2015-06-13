@@ -14,15 +14,23 @@
   <%= csrf_meta_tags %>
 </head>
 <nav>
-<div class="sauce-title">Sauce!</div>
-  <p class="userinfo">
-    <% if current_user %>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Sauce</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>  <% if current_user %>
       Signed in as <%= current_user.first_Name %><br>
       <%= link_to "Log Out", logout_path, :method => :delete %>
       <% else %>
       <%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
-      <% end %>
-  </p>
+      <% end %></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- <div class="sauce-title">Sauce!</div> -->
+  <!-- <p class="userinfo"> -->
+<!--  -->
 </nav>
 <body>
    <% if flash[:notice] %>
