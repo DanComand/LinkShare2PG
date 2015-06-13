@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-
+  before_filter :ensure_logged_in, only: [:index, :create, :destroy]
 
   def index
     @lists = List.all
