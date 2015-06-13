@@ -54,10 +54,17 @@ font-family: 'Raleway', sans-serif;
 padding-top: 30px;
 text-align: center;
 font-family: 'Raleway', sans-serif;
+font-size: 20px;
 
 }
 
 .each-bookmark {
+
+margin: 50px auto;
+font-size: 20px;
+border: 2px solid black;
+width: 80%;
+
 
 
 }
