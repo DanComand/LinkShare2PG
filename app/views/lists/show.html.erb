@@ -5,6 +5,7 @@
   <div class="login-form">
 
   <div class="bookmark-list">
+  <div class="each-bookmark">
     <% @bookmarks.each do |bookmark| %>
 
       <p>Posted by: <%= bookmark.user.first_Name %></p>
@@ -13,5 +14,6 @@
     <p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
       <p><%= bookmark.summary %></p>
     <% end %>
+    </div>
   </div>
 </div>
