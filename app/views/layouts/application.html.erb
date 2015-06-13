@@ -10,7 +10,7 @@
 <div class="sauce-title">Sauce!</div>
   <p class="userinfo">
     <% if current_user %>
-      Signed in as <%= current_user.first_Name %> //
+      Signed in as <%= current_user.first_Name %><br>
       <%= link_to "Log Out", logout_path, :method => :delete %>
       <% else %>
       <%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>

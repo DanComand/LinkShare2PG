@@ -21,7 +21,7 @@ time, mark, audio, video {
 
 nav {
 
-border: 2px solid black;
+border-bottom: 1px solid black;
 
 }
 
@@ -30,6 +30,14 @@ border: 2px solid black;
   text-align: center;
   font-size: 30px;
   font-style: italic;
+}
+
+.userinfo {
+
+text-align: center;
+font-size: 20px;
+font-family: "Arial"
+
 }
 
 .bookmark-form {
@@ -41,8 +49,16 @@ padding-top: 30px;
 }
 
 .bookmark-list {
-
+padding-top: 30px;
 text-align: center;
+}
+
+.forms {
+padding-top: 30px;
+text-align: center;
+font-size: 16px;
+font-family: "Arial"
+
 }
 
 img {
