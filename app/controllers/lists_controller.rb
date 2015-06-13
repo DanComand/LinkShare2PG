@@ -1,9 +1,8 @@
 class ListsController < ApplicationController
 
-  before_filter :ensure_logged_in, only: [:index, :create, :destroy]
 
   def index
-    @lists = current_user.lists
+    @lists = List.all
   end
 
   def show
@@ -30,13 +29,5 @@ class ListsController < ApplicationController
 
   def list_params
     params.require(:list).permit(:name, :user_id)
-  end
-
-  def ensure_has_invite
-    @list = List.find(params[:id])
-    unless Invite.where(email: current_user.email).find_by_list_id(params[:id]) or @list.user == current_user
-      redirect_to lists_url
-
-    end
   end
 end

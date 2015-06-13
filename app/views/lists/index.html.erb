@@ -1,3 +1,4 @@
+
 <div class="login-form">
 
   <h1>Create a new list</h1>
@@ -15,10 +16,11 @@
 
   <% end %>
 
-<div class="list-each">
+    <% @lists.each do |list| %>
 
-    <% @lists.each do |list| %><br>
-    <%= link_to list.name, "/lists/#{list.id}" %>
+
+    <p><%= link_to list.name, "/lists/#{list.id}" %></p>
+
     <% end %>
 
 </div>

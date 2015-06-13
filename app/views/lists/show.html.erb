@@ -3,22 +3,6 @@
 
 <div class="login-form">
 
-  <h1>Create a new list</h1>
-
-    <%= form_for List.new do |f| %>
-
-    <div class="field">
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-    </div>
-    <br>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
-  <% end %>
-
-
 <div class="bookmark-list">
   <% @bookmarks.each do |bookmark| %>
     <!-- <p><%= bookmark.url %></p> -->
