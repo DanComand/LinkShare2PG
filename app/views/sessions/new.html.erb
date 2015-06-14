@@ -1,17 +1,16 @@
 
-<div class="forms">
-<h1>Log into SAUCE!!!</h1>
+<!-- <div class="forms"> -->
+<p>Log into SAUCE!!!</p>
 
 <%= form_tag sessions_path do %>
-  <div class="field">
+  <div class="input-field">
     <%= label_tag :email %><br/>
     <%= text_field_tag :email, params[:email] %>
   </div>
-  <div class="field">
+  <div class="input-field">
     <%= label_tag :password %><br/>
     <%= password_field_tag :password %>
   </div>
   <div class="actions"><%= submit_tag "Log in" %></div>
 <% end %>
 
-</div>
