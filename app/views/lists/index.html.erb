@@ -1,27 +1,25 @@
-<div class="forms">
-<div class="login-form">
+<div class="container">
 
-  <h1>Create a new list</h1>
+<h1>Create a new list</h1>
 
-    <%= form_for List.new do |f| %>
+<%= form_for List.new do |f| %>
 
-    <div class="field">
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-    </div>
-    <br>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
-  <% end %>
-
-    <% @lists.each do |list| %>
-
-
-    <p><%= link_to list.name, "/lists/#{list.id}" %></p>
-
-    <% end %>
-
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
 </div>
+<br>
+<div class="actions">
+  <%= f.submit %>
 </div>
+
+<% end %>
+
+
+<% @lists.each do |list| %>
+
+  <p><%= link_to list.name, "/lists/#{list.id}" %></p>
+
+<% end %>
+
+
