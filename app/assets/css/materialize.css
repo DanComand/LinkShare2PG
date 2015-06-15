@@ -5164,7 +5164,7 @@ html {
   color: rgba(0, 0, 0, 0.87); }
   @media only screen and (min-width: 0) {
     html {
-      font-size: 40px; } }
+      font-size: 14px; } }
   @media only screen and (min-width: 992px) {
     html {
       font-size: 14.5px; } }
