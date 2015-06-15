@@ -1,8 +1,9 @@
 
-<div class="center-content">
+<div class="container">
   <%= render 'bookmarks/form' %>
+</div>
 
-<div class="bookmark-center">
+
   <% @bookmarks.each do |bookmark| %>
 <a href="<%= bookmark.url %>" target="_blank">
 <div class="row">
@@ -19,9 +20,7 @@
   <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %></a>
 </div>
 </div>
-</div>
-</div>
-<% end %>
-</a>
+
+</div><% end %>
 </div>
 </div>
