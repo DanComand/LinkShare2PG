@@ -16,7 +16,7 @@
   <p><%= bookmark.summary %></p>
 </div>
 <div class="card-action">
-  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %></a>
+  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %> at <%= bookmark.created_at.strftime("%I:%M%p %d %b %Y") %></a>
 </div>
 </div>
 
