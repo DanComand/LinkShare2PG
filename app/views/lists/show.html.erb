@@ -4,6 +4,7 @@
 
 
   <% @bookmarks.each do |bookmark| %>
+  <%= link_to bookmark.title, "http://#{bookmark.url}" %>
 <a href="<%= bookmark.url %>" target="_blank">
 <div class="row center-align">
 <div class="col s12 m7">
