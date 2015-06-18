@@ -12,6 +12,10 @@
 <div class="actions">
   <%= f.submit %>
 </div>
+<% end %>
+<% @dailylist.each do |dbookmark| %>
+
+<%= dbookmark.title %>
 
 <% end %>
 

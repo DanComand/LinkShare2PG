@@ -1,8 +1,9 @@
 class ListsController < ApplicationController
-  before_filter :ensure_logged_in, only: [:index, :create, :destroy]
+  before_filter :ensure_logged_in, only: [:index, :show, :create, :destroy]
 
   def index
     @lists = List.all
+    @dailylist = Bookmark.where(updated_at: (Time.now - 24.hours)..Time.now)
   end
 
   def show
