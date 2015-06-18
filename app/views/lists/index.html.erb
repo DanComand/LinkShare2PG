@@ -18,7 +18,7 @@
 <div class="row center-align">
 <% @lists.each do |list| %>
 
-  <p><%= link_to list.name, "/lists/#{list.id}" %><%= link_to "Delete", list_path(list), method: :delete, data: {confirm: "Are you sure you want to delete this list?"} %></p>
+  <p><%= link_to list.name, "/lists/#{list.id}" %> // <i><%= link_to "Delete", list_path(list), method: :delete, data: {confirm: "Are you sure you want to delete this list?"} %></i></p>
  
 <% end %>
 </div>
