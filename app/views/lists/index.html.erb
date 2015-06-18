@@ -1,10 +1,10 @@
-<div class="container">
+
 
 <h1>Create a new list</h1>
 
 <%= form_for List.new do |f| %>
 
-<div class="field">
+<div class="input-field">
   <%= f.label :name %><br>
   <%= f.text_field :name %>
 </div>
@@ -15,11 +15,10 @@
 
 <% end %>
 
-
+<div class="row center-align">
 <% @lists.each do |list| %>
 
   <p><%= link_to list.name, "/lists/#{list.id}" %></p>
 
 <% end %>
-
-
+</div>
