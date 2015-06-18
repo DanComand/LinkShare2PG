@@ -30,6 +30,7 @@
   </nav>
 
 <body>
+ <div class="container">
    <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
     <% end %>
@@ -38,6 +39,6 @@
     <% end %>
 <%= yield %>
 
-
+</div>
 </body>
 </html>
