@@ -1989,7 +1989,7 @@ ul {
   list-style-type: none; }
 
 a {
-  color: #039be5;
+  color: #01579b;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; }
 
@@ -5027,7 +5027,7 @@ nav {
   height: 56px;
   line-height: 56px; }
   nav a {
-    color: #fff; }
+    color: #01579b; }
   nav .nav-wrapper {
     position: relative;
     height: 100%; }
@@ -5085,7 +5085,7 @@ nav {
         background-color: rgba(0, 0, 0, 0.1); }
     nav ul a {
       font-size: 1rem;
-      color: #fff;
+      color: #01579b;
       display: block;
       padding: 0 15px; }
     nav ul.left {
@@ -5160,7 +5160,8 @@ nav {
   font-weight: 700; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #01579b; }
 
 html {
   line-height: 1.5;
@@ -5432,7 +5433,7 @@ small {
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 20px; }
     .card .card-action a {
-      color: #ffab40;
+      color: #01579b;
       margin-right: 20px;
       -webkit-transition: color .3s ease;
       -moz-transition: color .3s ease;
@@ -6789,7 +6790,7 @@ select {
     .side-nav li:hover, .side-nav li.active {
       background-color: #ddd; }
   .side-nav a {
-    color: #444;
+    color: #01579b;
     display: block;
     font-size: 1rem;
     height: 64px;
