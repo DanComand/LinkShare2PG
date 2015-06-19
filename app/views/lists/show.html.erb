@@ -1,11 +1,18 @@
 
   <%= render 'bookmarks/form' %>
+<div class="row">
+	<div class="col s3">
+	<p>Your Lists</p>
+<% @lists.each do |list| %>
 
-  <% @bookmarks.each do |bookmark| %>
+  <p><%= link_to list.name, "/lists/#{list.id}" %>
+	<% end %>
+	</div>
 
-<a href="<%= bookmark.url %>" target="_blank">
-<div class="row center-align">
-<div class="col s1"></div>
+	<div class="col s9">
+		<% @bookmarks.each do |bookmark| %>
+
+	<a href="<%= bookmark.url %>" target="_blank"></a>
 <div class="card">
 <div class="card-image">
   <img src="<%= bookmark.image %>">

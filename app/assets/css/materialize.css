@@ -4,6 +4,10 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 
+.sidebar {
+
+  border: 2px solid black;
+}
 .center-content {
 
   margin: 0 auto;
