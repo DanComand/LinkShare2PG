@@ -16,7 +16,7 @@
 	<div class="col s9">
 		<% @bookmarks.each do |bookmark| %>
 
-	<a href="<%= bookmark.url %>" target="_blank"></a>
+	<a href="<%= bookmark.url %>" target="_blank">
 <div class="card">
 <div class="card-image">
   <img src="<%= bookmark.image %>">
@@ -26,8 +26,8 @@
   <p><%= bookmark.summary %></p>
 </div>
 <div class="card-action">
-  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %> at <i><%= bookmark.created_at.strftime("%I:%M%p %d %b %Y") %></a></i>
-  <p><%= bookmark.user.first_Name %>: <%= bookmark.description %></p>
+  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %> at <i><%= bookmark.created_at.strftime("%I:%M%p %d %b %Y") %></a></i></a>
+
 </div>
 </div>
 <% end %>
