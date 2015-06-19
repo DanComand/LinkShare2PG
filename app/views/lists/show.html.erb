@@ -2,12 +2,15 @@
   <%= render 'bookmarks/form' %>
 <div class="row">
 	<div class="col s3">
-	<p>Your Lists</p>
+	  <div class="card-panel blue accent-2">
+	<h5><i>Your Lists</i></h5>
 <% @lists.each do |list| %>
 
-  <p><%= link_to list.name, "/lists/#{list.id}" %>
+  <span class="#c2185b-text text-darken-2"><p><%= link_to list.name, "/lists/#{list.id}" %></p></span>
 	<% end %>
+
 	</div>
+</div>
 
 	<div class="col s9">
 		<% @bookmarks.each do |bookmark| %>

@@ -4,6 +4,10 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 
+
+.listbg {
+  background-color: black;
+}
 .sidebar {
 
   border: 2px solid black;
