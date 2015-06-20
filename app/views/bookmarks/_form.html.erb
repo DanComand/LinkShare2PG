@@ -1,18 +1,19 @@
 
 <%= form_for [@list, Bookmark.new] do |f| %>
 
-<div class="input-field">
-  <%= f.label :Add_A_Link %><br>
-  <%= f.text_field :url %>
-</div>
 
-<div class="input-field">
-  <%= f.label :description %><br>
-  <%= f.text_field :description %>
-</div>
+		<div class="input-field">
+		  <%= f.label :Add_A_Link %><br>
+		  <%= f.text_field :url %>
+		</div>
 
-<div class="input-field center align">
-  <%= f.submit "Sauce It!" %>
-</div>
+		<div class="input-field">
+		  <%= f.label :description %><br>
+		  <%= f.text_field :description %>
+		</div>
+
+		<div class="input-field center align">
+		  <%= f.submit "Sauce It!" %>
+		</div>
 
 <% end %>

@@ -20,6 +20,13 @@
 
 </div>
 
+<% @bookmarkslatest.each do |latest| %>
+
+<%= bookmarkslatest.name %>
+
+<% end %>
+
+
 
 <div class="bookmark-list">
   <% @bookmarks.each do |bookmark| %>
@@ -30,3 +37,4 @@
     <p><%= bookmark.summary %></p>
   <% end %>
 </div>
+

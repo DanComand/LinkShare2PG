@@ -10,6 +10,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks.order(created_at: :desc)
     @lists = List.all
+       @bookmarkslatest = @bookmarks.where('created_at > ?', 1.days.ago)
 
   end
 
