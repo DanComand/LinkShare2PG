@@ -14,6 +14,8 @@ class ListsController < ApplicationController
 
   def new
     @list = List.new
+    @bookmarks = @list.bookmarks.order(created_at: :desc)
+    @bookmarkslatest = @bookmarks.where('created_at > ?', 1.days.ago)
   end
 
   def create
