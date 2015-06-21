@@ -1,7 +1,35 @@
-<h1>Latest</h1>
+<h4>Latest</h4>
+<div class="row">
+	<div class="col s3">
+	  <div class="card-panel">
+	<h5><i>Your Lists</i></h5>
+<% @lists.each do |list| %>
+<div class="card-content white-text">
+<p><%= link_to list.name, "/lists/#{list.id}" %></p>
+</div>
+ <% end %>
 
-<% @bookmarkslatest.each do |latest| %>
+	</div>
+</div>
 
-<%= latest.title %>
+<div class="col s9">
+  <% @bookmarkslatest.each do |latest| %>
 
+  <a href="<%= latest.url %>" target="_blank">
+<div class="card">
+<div class="card-image">
+  <img src="<%= latest.image %>">
+  <span class="card-title #000000 black"><%= latest.title %></span>
+</div>
+<div class="card-content">
+  <p><%= latest.summary %></p>
+</div>
+<div class="card-action">
+  <a href="<%= latest.url %>" target="_blank">Posted by: <%= latest.user.first_Name %> at <i><%= latest.created_at.strftime("%I:%M%p %d %b %Y") %></a></i></a>
+
+</div>
+</div>
 <% end %>
+</div>
+</div>
+

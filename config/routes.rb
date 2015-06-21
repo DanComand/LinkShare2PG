@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :destroy]
 
   get 'bookmarks/today'
+  post 'bookmarks/today'
   resources :lists do
     resources :bookmarks, shallow: true do
 

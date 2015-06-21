@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_filter :ensure_logged_in, only: [:index, :create, :destroy]
+  before_filter :ensure_logged_in, only: [:index, :create, :destroy, :latest]
 
 
   def index
@@ -10,7 +10,7 @@ class BookmarksController < ApplicationController
   def today
      @bookmarks = current_user.bookmarks.order(created_at: :desc)
      @bookmarkslatest = @bookmarks.where('created_at > ?', 1.days.ago)
-
+  @lists = List.all
 
   end
 
