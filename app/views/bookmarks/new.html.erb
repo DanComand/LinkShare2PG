@@ -1,5 +1,5 @@
 
-<%= form_for(@bookmark) do |f| %>
+<%= form_for Bookmark.new do |f| %>
 
   <div class ="field">
     <%= f.label :url %><br>
@@ -16,3 +16,24 @@
   </div>
 
 <% end %>
+
+<div class="col s9">
+  <% @bookmarkslatest.each do |latest| %>
+
+  <a href="<%= bookmark.url %>" target="_blank">
+<div class="card">
+<div class="card-image">
+  <img src="<%= bookmark.image %>">
+  <span class="card-title #000000 black"><%= bookmark.title %></span>
+</div>
+<div class="card-content">
+  <p><%= bookmark.summary %></p>
+</div>
+<div class="card-action">
+  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %> at <i><%= bookmark.created_at.strftime("%I:%M%p %d %b %Y") %></a></i></a>
+
+</div>
+</div>
+<% end %>
+</div>
+</div>

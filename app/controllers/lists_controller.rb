@@ -3,7 +3,6 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
-    @dailylist = Bookmark.where(updated_at: (Time.now - 24.hours)..Time.now)
   end
 
   def show
@@ -11,7 +10,6 @@ class ListsController < ApplicationController
     @bookmarks = @list.bookmarks.order(created_at: :desc)
     @lists = List.all
     @bookmarkslatest = @bookmarks.where('created_at > ?', 1.days.ago)
-
   end
 
   def new
