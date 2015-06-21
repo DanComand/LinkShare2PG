@@ -7,6 +7,13 @@ class BookmarksController < ApplicationController
     @bookmarkslatest = @bookmarks.where('created_at > ?', 1.days.ago)
   end
 
+  def today
+     @bookmarks = current_user.bookmarks.order(created_at: :desc)
+     @bookmarkslatest = @bookmarks.where('created_at > ?', 1.days.ago)
+
+
+  end
+
 
   def show
      @bookmarks = Bookmark.find(params[:id])
