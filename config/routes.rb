@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :users, only: [:new, :create, :show, :destroy]
-
-  get 'bookmarks/today'
-  post 'bookmarks/today'
+  get 'bookmarks/today' => 'bookmarks#today'
+  post 'bookmarks/today' => 'bookmarks#today'
   resources :lists do
     resources :bookmarks, shallow: true do
 
