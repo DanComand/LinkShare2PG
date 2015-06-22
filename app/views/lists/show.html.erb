@@ -28,7 +28,8 @@
   <p><%= bookmark.summary %></p>
 </div>
 <div class="card-action">
-  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %> at <i><%= bookmark.created_at.strftime("%I:%M%p %d %b %Y") %></a></i></a>
+  <a href="<%= bookmark.url %>" target="_blank">Posted by: <%= bookmark.user.first_Name %> at <i><%= bookmark.created_at.strftime("%I:%M%p %d %b %Y") %></a></i></a><i><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure you want to delete this list?"} %></i>
+ 
 
 </div>
 </div>
