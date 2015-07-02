@@ -20,16 +20,11 @@
 
 
 <div class="row center-align">
-<%= link_to 'Latest', "/bookmarks/today" %>
 
 <% @lists.each do |list| %>
 
   <p>
-	<% if @bookmarks('created_at > ?', 1.days.ago) = true %>
-
-	  <%= link_to "Log in", new_session_path %> or <%= link_to "Sign Up", new_user_path %>
-	  <% end %>
-
+	
   <%= link_to list.name, "/lists/#{list.id}" %> // <i><%= link_to "Delete", list_path(list), method: :delete, data: {confirm: "Are you sure you want to delete this list?"} %></i></p>
  
 <% end %>
