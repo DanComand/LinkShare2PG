@@ -32,7 +32,10 @@
   <div class="card-content">
   <p><%= bookmark.description %></p>
 </div>
- 
+<%= form_for [@bookmark, Favorite.new] do |f| %>
+<%= check_box_tag(:favorite) %>
+<%= label_tag(:favorite, "Add to favorites") %>
+<% end %>
 
 </div>
 </div>

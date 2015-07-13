@@ -35,12 +35,7 @@
 
   <p><a href="<%= bookmark.url %>" target="_blank"><img src="<%= bookmark.image %>"></a></p>
     <p><%= bookmark.summary %></p>
-    <%= form_for(@bookmark) do |f| %>
-    <%= check_box_tag(:pet_dog) %>
-<%= label_tag(:pet_dog, "I own a dog") %>
-<%= check_box_tag(:pet_cat) %>
-<%= label_tag(:pet_cat, "I own a cat") %>
-  <% end %>
+
   <% end %>
 </div>
 
